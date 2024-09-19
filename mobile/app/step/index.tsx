@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from 'react-hook-form'
 import { Input } from '@/components/input'
 import { router } from 'expo-router'
+import { userDataStore } from '@/store/data'
 
 
 const schema = z.object({
@@ -23,8 +24,16 @@ export default function Step(){
         resolver: zodResolver(schema)
     })
 
+    const setPageOne = userDataStore(state => state.setPageOne)
+
     function handleCreate(data: FormData){
-        console.log(data)
+        console.log("PASSANDO DADOS PÁGINA 1")
+        setPageOne({
+            name: data.name,
+            weight: data.weight,
+            age: data.age,
+            height: data.height
+        })
 
         router.push("/create")
     }
