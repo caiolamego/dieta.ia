@@ -1,4 +1,4 @@
-# dieta.ia
+# Dieta.IA
 ### Para rodar o sistema é simples! Você deve acessar a pasta "backend" no terminal e rodar o comando "npm run dev" e posteriormente acessar pasta "mobile" e rodar o comando "npx expo start"
 
 ## Obs: 
