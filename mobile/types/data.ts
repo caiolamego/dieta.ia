@@ -6,6 +6,7 @@ export interface Data {
     peso: number,
     objetivo: number,
     refeicoes: RefeicoesProps[],
+    suplementos: string[]
 }
 
 interface RefeicoesProps {
