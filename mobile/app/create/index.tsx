@@ -56,6 +56,8 @@ type FormData = z.infer<typeof schema>
         gender: data.gender,
         objective: data.objective
       })
+
+      router.push("/nutrition")
     }
   
    return (
